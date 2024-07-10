@@ -94,6 +94,7 @@ WITH cte AS (
   SELECT DISTINCT event_date 
   FROM activity
 )
+
 SELECT c2.event_date, COALESCE(c1.cnt, 0) AS cnt
 FROM cte c1
 RIGHT JOIN cte1 c2
